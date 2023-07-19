@@ -9,12 +9,12 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:background="@drawable/logofptedu"
-        android:layout_marginLeft="-140dp"
+        android:layout_marginLeft="-115dp"
         />
 
     <ImageView
@@ -40,8 +40,8 @@
         android:layout_height="60dp"
         android:text="Chọn cơ sở đào tạo"
         android:paddingStart="20dp"
-        android:drawablePadding="-20dp"
-        android:drawableStart="@drawable/location1"
+        android:drawablePadding="-40dp"
+        android:drawableStart="@drawable/location3"
         android:layout_marginTop="50dp"
         android:background="@drawable/custom_input"
         android:textAllCaps="false"
@@ -55,6 +55,7 @@
         android:layout_height="60dp"
         android:text="Đăng nhập với Google"
         android:paddingStart="20dp"
+        android:drawablePadding="-15dp"
         android:drawableStart="@drawable/logogoogle"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"

@@ -10,9 +10,9 @@
     </item>
     <item android:state_enabled="true" >
         <shape android:shape="rectangle">
-            <solid android:color="#2FCDAE"/>
+            <solid android:color="#71E2F0"/>
             <corners android:radius="20dp"/>
-            <stroke android:color="#005DFF" android:width="1dp" />
+            <stroke android:color="#F6B329" android:width="2dp" />
         </shape>
     </item>
 
