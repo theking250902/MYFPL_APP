@@ -2,9 +2,12 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amethysta</item>
+        <item>@font/amiri</item>
         <item>@font/andika</item>
+        <item>@font/arima_madurai_light</item>
         <item>@font/arsenal_bold</item>
         <item>@font/arvo_bold</item>
+        <item>@font/autour_one</item>
         <item>@font/bellefair</item>
     </array>
 </resources>
