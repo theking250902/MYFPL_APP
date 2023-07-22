@@ -116,6 +116,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
             android:layout_width="152dp"
             android:layout_height="60dp"
             android:text=" Google"
@@ -124,6 +125,7 @@
             android:drawableStart="@drawable/icongg"
             android:background="@drawable/custom_input"
             android:textAllCaps="false"
+            android:onClick="click"
             android:layout_gravity="center"
             android:textColor="#996699"
             android:textStyle="bold"
