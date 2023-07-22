@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_tab1" android:title="Home" android:icon="@drawable/ic_black_home" />
+    <item android:id="@+id/menu_tab2" android:title="Lịch học" android:icon="@drawable/ic_black_schedule" />
+    <item android:id="@+id/menu_tab3" android:title="Đăng kí " android:icon="@drawable/ic_black_service" />
+    <item android:id="@+id/menu_tab4" android:title="Cá nhân" android:icon="@drawable/ic_black_proifile" />
+</menu>
