@@ -12,13 +12,15 @@
     <color name="trangchu">#FF3700B3</color>
     <color name="lichhoc">#FFBB86FC</color>
     <color name="lichthi">#F1F0A6</color>
-    <color name="dangki">#9380BC</color>
-    <color name="canhan">#</color>
+    <color name="canhan">#9380BC</color>
 
-    <color name="trangchu_20">#333700B3</color>
-    <color name="lichhoc_20">#33BB86FC</color>
-    <color name="lichthi_20">#33F1F0A6</color>
-    <color name="dangki_20">#339380BC</color>
-    <color name="canhan_20">#33935A5A</color>
+
+    <color name="trangchu2">#333700B3</color>
+    <color name="lichhoc2">#33BB86FC</color>
+    <color name="lichthi2">#33F1F0A6</color>
+    <color name="canhan2">#339380BC</color>
+
+
+
 
 </resources>
