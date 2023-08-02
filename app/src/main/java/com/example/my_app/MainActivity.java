@@ -22,6 +22,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        trangchuFragment trangchuFragment = new trangchuFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, trangchuFragment)
+                .commit();
+        lichthiFragment lichthiFragment = new lichthiFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, lichthiFragment)
+                .commit();
+        lichhocFragment lichhocFragment = new lichhocFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, lichhocFragment)
+                .commit();
+
+
         final LinearLayout homeLayout = findViewById(R.id.homelayout);
         final LinearLayout lichhocLayout = findViewById(R.id.lichhoclayout);
         final LinearLayout lichthiLayout = findViewById(R.id.lichthilayout);
@@ -155,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                     lichthiImage.setImageResource(R.drawable.icon_lichthi);
 
                     canhanTxt.setVisibility(View.VISIBLE);
-                    canhanImage.setImageResource(R.drawable.icon_profile);
+                    canhanImage.setImageResource(R.drawable.icon_profile_click);
                     canhanLayout.setBackgroundResource(R.drawable.round_back_canhan_100);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f,Animation.RELATIVE_TO_SELF,0.0f);
@@ -170,5 +185,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void lichhocBTN() {
+        lichhocFragment lichhocFragment = new lichhocFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, lichhocFragment)
+                .addToBackStack(null)  // Thêm fragment hiện tại vào back stack
+                .commit();
+    }
+    public void lichthiBTN() {
+        lichthiFragment lichthiFragment = new lichthiFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, lichthiFragment)
+                .addToBackStack(null)  // Thêm fragment hiện tại vào back stack
+                .commit();
+    }
+    public void home() {
+        trangchuFragment trangchuFragment = new trangchuFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, trangchuFragment)
+                .addToBackStack(null)  // Thêm fragment hiện tại vào back stack
+                .commit();
     }
 }

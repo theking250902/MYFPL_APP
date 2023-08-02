@@ -82,7 +82,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/btn_home"
+                    android:id="@+id/btn_lichhoc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="135dp"
@@ -267,7 +267,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/btn_home2"
+                    android:id="@+id/btn_lichthi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="220dp"

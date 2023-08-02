@@ -1,5 +1,6 @@
 package com.example.my_app.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,18 +8,21 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.my_app.Home.HomeActivity;
+import com.example.my_app.MainActivity;
 import com.example.my_app.R;
 
 
 public class trangchuFragment extends Fragment {
 
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
 
@@ -26,6 +30,26 @@ public class trangchuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_trangchu, container, false);
+
+        TextView switchButton = view.findViewById(R.id.btn_lichhoc);
+        switchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển đổi sang FragmentB khi nút được nhấp
+                ((MainActivity) requireActivity()).lichhocBTN();
+            }
+        });
+        TextView switchButton2 = view.findViewById(R.id.btn_lichthi);
+        switchButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển đổi sang FragmentB khi nút được nhấp
+                ((MainActivity) requireActivity()).lichthiBTN();
+            }
+        });
+
+        return view;
     }
+
 }
