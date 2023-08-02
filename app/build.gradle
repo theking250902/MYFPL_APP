@@ -43,9 +43,10 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
 
+
     implementation 'com.google.android.gms:play-services-auth:20.6.0' // google
     implementation(platform("com.google.firebase:firebase-bom:32.2.0")) // google
     implementation("com.google.firebase:firebase-auth") // google
     implementation("com.google.android.gms:play-services-auth:20.6.0") // google
-
+    implementation 'com.github.bumptech.glide:glide:4.15.1' //bo góc ảnh
 }

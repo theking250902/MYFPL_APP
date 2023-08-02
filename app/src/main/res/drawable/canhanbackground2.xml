@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#DAFA3E01" /> <!-- Màu nền của ảnh -->
+            <corners android:radius="16dp" /> <!-- Bán kính góc bo tròn, thay đổi giá trị theo ý muốn -->
+        </shape>
+    </item>
+    <item
+        android:left="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#DAFA3E01" /> <!-- Màu nền của ảnh -->
+            <corners android:topLeftRadius="16dp"
+            android:topRightRadius="16dp" /> <!-- Bán kính góc trên phải --> <!-- Bán kính góc trên trái -->
+        </shape>
+    </item>
+</layer-list>
