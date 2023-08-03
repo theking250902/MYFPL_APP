@@ -3,6 +3,8 @@ package com.example.my_app.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +20,8 @@ import com.example.my_app.R;
 import com.example.my_app.RetrofitHelper;
 import com.example.my_app.ScheduleAdapter;
 import com.example.my_app.RetrofitHelper;
+import com.example.my_app.oderframent.OderViewFragment;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +37,10 @@ public class trangchuFragment extends Fragment {
     ScheduleAdapter adapter;
     List<ListPostResponseDTO.PostResponseDTO> list;
     IRetrofit iRetrofit;
-    View view;
+    private View view;
+
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +51,15 @@ public class trangchuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_trangchu, container, false);
+
+        tabLayout = view.findViewById(R.id.tab_layout);
+        viewPager = view.findViewById(R.id.oder_viewpager);
+        OderViewFragment adapter1 = new OderViewFragment(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        viewPager.setAdapter(adapter1);
+        tabLayout.setupWithViewPager(viewPager);
+
+
+
         iRetrofit = RetrofitHelper.createService(IRetrofit.class);
         lvSchedules = view.findViewById(R.id.listviewne);
         list = new ArrayList<>();
