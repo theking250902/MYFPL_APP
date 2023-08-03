@@ -58,7 +58,7 @@ public class canhanFragment extends Fragment {
         ImageView imageView = rootView.findViewById(R.id.img_avt);
         Glide.with(this)
                 .load(R.drawable.anhdaidien)
-                .apply(new RequestOptions().transform(new CenterCrop()).transform(new RoundedCorners(45)))
+                .apply(new RequestOptions().transform(new CenterCrop()).transform(new RoundedCorners(100)))
                 .into(imageView);
         return rootView;
     }

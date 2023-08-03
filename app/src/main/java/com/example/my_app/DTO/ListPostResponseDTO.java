@@ -6,14 +6,14 @@ public class ListPostResponseDTO {
 
     private boolean status;
 
-    private List<PostResponseDTO> posts;
+    private List<PostResponseDTO> data;
 
     public ListPostResponseDTO() {
     }
 
     public ListPostResponseDTO(boolean status, List<PostResponseDTO> posts) {
         this.status = status;
-        this.posts = posts;
+        this.data = data;
     }
 
     public boolean isStatus() {
@@ -25,11 +25,11 @@ public class ListPostResponseDTO {
     }
 
     public List<PostResponseDTO> getPosts() {
-        return posts;
+        return data;
     }
 
     public void setPosts(List<PostResponseDTO> posts) {
-        this.posts = posts;
+        this.data = posts;
     }
 
     public class PostResponseDTO{
