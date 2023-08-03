@@ -9,8 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.my_app.Home.HomeActivity;
+import com.example.my_app.MainActivity;
 import com.example.my_app.R;
+import com.example.my_app.fragment.trangchuFragment;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -77,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = account.getEmail();
                 if (email.endsWith("@fpt.edu.vn")) {
                     Log.d("TAG", "handleSignInResult: " + email);
-                    Intent intent = new Intent(LoginActivity.this , HomeActivity.class);
+                    Intent intent = new Intent(LoginActivity.this , MainActivity.class);
                     startActivity(intent);
                 } else {
                     Log.d("TAG", "handleSignInResult: Email không hợp lệ");
@@ -89,16 +90,14 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
-
     private void initializeViews(){
         btnSignIn = findViewById(R.id.btn_login);
     }
 
     //google
 
-
     public void click(View view){
-        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        Intent intent = new Intent(LoginActivity.this, trangchuFragment.class);
         startActivity(intent);
     }
 }

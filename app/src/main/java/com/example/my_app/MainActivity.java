@@ -3,25 +3,40 @@ package com.example.my_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.my_app.DTO.ListPostResponseDTO;
+import com.example.my_app.DTO.Schedule;
 import com.example.my_app.fragment.canhanFragment;
 import com.example.my_app.fragment.lichhocFragment;
 import com.example.my_app.fragment.lichthiFragment;
 import com.example.my_app.fragment.trangchuFragment;
+import com.example.my_app.RetrofitHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+
 
     private int selectedTab = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         trangchuFragment trangchuFragment = new trangchuFragment();
         getSupportFragmentManager().beginTransaction()
@@ -186,6 +201,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     public void lichhocBTN() {
         lichhocFragment lichhocFragment = new lichhocFragment();

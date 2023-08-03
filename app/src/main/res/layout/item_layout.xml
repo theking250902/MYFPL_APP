@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center"
+        android:elevation="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_lichhoc">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="3dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/custom_input"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/schedule2"/>
+            <TextView
+                android:id="@+id/textDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:textColor="@color/black"
+                android:text="24/07/2023 "
+                android:layout_marginTop="-24dp"
+                />
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:textColor="@color/black"
+                android:text=" 17:30 - 19:30"
+                android:layout_marginTop="-19dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/arsenal_bold"
+                android:text="Android Networking - MOB403"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="9dp"
+                android:background="#D3D1D1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:text="Lớp:" />
+                <TextView
+                    android:id="@+id/textClass_name"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" MD17306"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:text="Phòng:" />
+                <TextView
+                    android:id="@+id/textRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" T308"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:text="Ca:" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 5"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:text="Giảng viên:" />
+                <TextView
+                    android:id="@+id/textTeacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Channn3"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:text="Mã môn:" />
+                <TextView
+                    android:id="@+id/textCourse_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text=" MOB403"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/arsenal_bold"
+                android:text="Giảng đường:" />
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" CVPM Quang Trung"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="-20sp"
+                android:layout_marginLeft="120dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/gachduoi"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
