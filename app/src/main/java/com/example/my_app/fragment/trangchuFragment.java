@@ -44,15 +44,6 @@ public class trangchuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_trangchu, container, false);
-        TextView switchButton = view.findViewById(R.id.btn_lichhoc);
-        switchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Chuyển đổi sang FragmentB khi nút được nhấp
-                ((MainActivity) requireActivity()).lichhocBTN();
-            }
-        });
-
         iRetrofit = RetrofitHelper.createService(IRetrofit.class);
         lvSchedules = view.findViewById(R.id.listviewne);
         list = new ArrayList<>();

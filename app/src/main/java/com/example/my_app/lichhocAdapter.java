@@ -5,26 +5,28 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.my_app.DTO.ApiResponse;
 import com.example.my_app.DTO.ListPostResponseDTO;
+import com.example.my_app.DTO.Schedule;
 
 import java.util.List;
 
-public class ScheduleAdapter extends BaseAdapter {
+public class lichhocAdapter extends BaseAdapter {
 
-    private  List<ListPostResponseDTO.PostResponseDTO> posts;
+    private  List<Schedule> chedule;
 
-    public ScheduleAdapter(List<ListPostResponseDTO.PostResponseDTO> posts){
-        this.posts = posts;
+    public lichhocAdapter(List<Schedule> chedule){
+        this.chedule = chedule;
     }
 
     @Override
     public int getCount() {
-        return this.posts.size();
+        return this.chedule.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.posts.get(position);
+        return this.chedule.get(position);
     }
 
     @Override
@@ -36,31 +38,47 @@ public class ScheduleAdapter extends BaseAdapter {
     public View getView(int _i, View _view, ViewGroup _viewGroup) {
         View view = _view;
         if(view == null){
-            view = View.inflate(_viewGroup.getContext(), R.layout.item_listview,null);
-              TextView  titleTxt = view.findViewById(R.id.titleTxt);
-            TextView  created_atTxt = view.findViewById(R.id.created_atTxt);
-            ViewHolder viewHolder = new ViewHolder(titleTxt,created_atTxt);
+            view = View.inflate(_viewGroup.getContext(), R.layout.item_layout,null);
+           TextView textRoom = view.findViewById(R.id.textRoom);
+            TextView  textDay = view.findViewById(R.id.textDay);
+            TextView  textTime = view.findViewById(R.id.textTime);
+            TextView  textClass_name = view.findViewById(R.id.textClass_name);
+            TextView  textTeacher_name = view.findViewById(R.id.textTeacher_name);
+            TextView textAddress = view.findViewById(R.id.textAddress);
+            ViewHolder viewHolder = new ViewHolder(textRoom,textDay,textTime,textClass_name,textTeacher_name,textAddress);
             view.setTag(viewHolder);
         }
-        ListPostResponseDTO.PostResponseDTO post =
-                this.posts.get(_i);
+        Schedule post =
+                this.chedule.get(_i);
         ViewHolder holder = (ViewHolder) view.getTag();
-        holder.titleTxt.setText(post.getTitle());
-        holder.created_atTxt.setText(post.getCreated_at() + "");
+                holder.textRoom.setText(post.getRoom());
+        holder.textDay.setText(post.getDay());
+        holder.textTime.setText(post.getTime() + "");
+        holder.textClass_name.setText(post.getClass_name());
+        holder.textTeacher_name.setText(post.getTeacher_name());
+        holder.textAddress.setText(post.getAddress());
+
 
 
         return view;
     }
 
 private static class ViewHolder{
-    final TextView  titleTxt;
-    final TextView  created_atTxt;
+    final  TextView textRoom;
+    final TextView textDay;
+    final        TextView textTime;
+    final    TextView textClass_name;
+    final   TextView textTeacher_name;
+    final   TextView textAddress;
 
-    public ViewHolder(TextView titleTxt, TextView created_atTxt) {
-        this.titleTxt = titleTxt;
-        this.created_atTxt = created_atTxt;
 
-
+    public ViewHolder(TextView textRoom, TextView textDay, TextView textTime, TextView textClass_name, TextView textTeacher_name, TextView textAddress) {
+        this.textRoom = textRoom;
+        this.textDay = textDay;
+        this.textTime = textTime;
+        this.textClass_name = textClass_name;
+        this.textTeacher_name = textTeacher_name;
+        this.textAddress = textAddress;
     }
 }
 
