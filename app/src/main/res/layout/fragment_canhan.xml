@@ -1,271 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.canhanFragment"
-    android:orientation="vertical"
-    android:background="#EFEFEF">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="15dp"
-        android:background="@color/canhan">
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:onClick="click2"
-            android:src="@drawable/baseline_arrow_back_25"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="90dp"
-            android:fontFamily="@font/arsenal_bold"
-            android:text="Hồ sơ cá nhân"
-            android:textColor="#FEFFE6"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:background="@drawable/canhanbackground">
+    tools:context=".fragment.canhanFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#EFEFEF">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/canhanbackground2"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="@color/canhan">
             <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="click2"
+                android:src="@drawable/baseline_arrow_back_25"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="90dp"
+                android:fontFamily="@font/arsenal_bold"
+                android:text="Hồ sơ cá nhân"
+                android:textColor="#FEFFE6"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:background="@drawable/canhanbackground">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:src="@drawable/logofptxoaphong"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="230dp"/>
-        </LinearLayout>
+                android:background="@drawable/canhanbackground2"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/logofptxoaphong"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="230dp"/>
+            </LinearLayout>
 
 
-        <ImageView
-            android:id="@+id/img_avt"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:src="@drawable/anhdaidien"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            android:elevation="4dp"
-            android:layout_marginTop="-38dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trần Thiện Chiến"
-                android:textStyle="bold"
-                android:textSize="20sp"
+            <ImageView
+                android:id="@+id/img_avt"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/anhdaidien"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#111111"
-                android:layout_marginTop="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
+                android:scaleType="centerCrop"
+                android:elevation="4dp"
+                android:layout_marginTop="-38dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="chienttps24584@fpt.edu.vn"
-                android:layout_gravity="center_horizontal"
-                android:textSize="15sp"
-                android:textStyle="normal"
-                android:textColor="#7A7979"/>
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trần Thiện Chiến"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#111111"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="chienttps24584@fpt.edu.vn"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:textColor="#7A7979"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mã sinh viên:"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#474040"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PS24584"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:textColor="#291B1B"
+                    android:layout_marginStart="20dp"/>
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@android:color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="30dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mã sinh viên:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#474040"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PS24584"
-                android:textStyle="normal"
-                android:textSize="20sp"
-                android:textColor="#291B1B"
-                android:layout_marginStart="20dp"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Giới tính:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#474040"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nam"
-                android:textStyle="normal"
-                android:textSize="20sp"
-                android:textColor="#291B1B"
-                android:layout_marginStart="20dp"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ngày sinh:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#474040"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2003-01-02"
-                android:textStyle="normal"
-                android:textSize="20sp"
-                android:textColor="#291B1B"
-                android:layout_marginStart="20dp"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Địa chỉ:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#474040"/>
-            <TextView
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Thôn An Ba, xã Hành Thịnh, huyện Nghĩa Hành, tỉnh Quảng Ngãi"
-                android:textStyle="normal"
-                android:textSize="20sp"
-                android:textColor="#291B1B"
-                android:layout_marginStart="0dp"
-                android:paddingRight="5dp"/>
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính:"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#474040"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nam"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:textColor="#291B1B"
+                    android:layout_marginStart="20dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày sinh:"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#474040"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2003-01-02"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:textColor="#291B1B"
+                    android:layout_marginStart="20dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Địa chỉ:"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#474040"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thôn An Ba, xã Hành Thịnh, huyện Nghĩa Hành, tỉnh Quảng Ngãi"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:textColor="#291B1B"
+                    android:layout_marginStart="0dp"
+                    android:paddingRight="5dp"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chuyên ngành:"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#474040"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lập trình máy tinnh(Mobile)"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:textColor="#291B1B"
+                    android:layout_marginStart="0dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trạng thái:"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#474040"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HDI"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:textColor="#291B1B"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="20dp"/>
+            </LinearLayout>
+
+
 
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chuyên ngành:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#474040"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lập trình máy tinnh(Mobile)"
-                android:textStyle="normal"
-                android:textSize="20sp"
-                android:textColor="#291B1B"
-                android:layout_marginStart="0dp"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trạng thái:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#474040"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HDI"
-                android:textStyle="normal"
-                android:textSize="20sp"
-                android:textColor="#291B1B"
-                android:layout_marginStart="20dp"
-                android:paddingBottom="20dp"/>
-        </LinearLayout>
+
+
 
 
 
     </LinearLayout>
-
-
-
-
-
-</LinearLayout>
+</ScrollView>
