@@ -59,45 +59,44 @@
                 android:background="@drawable/bell" />
         </LinearLayout>
 
-
-        <LinearLayout
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/arsenal_bold"
-                android:text="Thông báo"
-                android:textColor="#09051C"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/btn_lichhoc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="195dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/arsenal_bold"
-                android:text="Chi tiết"
-
-                android:textSize="10dp" />
-        </LinearLayout>
-
-
-        <ListView
-            android:id="@+id/listviewne"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/oder_viewpager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:elevation="5dp"
-            android:divider="@null"
-            android:dividerHeight="0dp"
-            android:scrollbars="none"
-            />
+            android:layout_height="match_parent">
+        </androidx.viewpager.widget.ViewPager>
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="35dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:fontFamily="@font/arsenal_bold"-->
+<!--                android:text="Thông báo"-->
+<!--                android:textColor="#09051C"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/btn_lichhoc"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="195dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:fontFamily="@font/arsenal_bold"-->
+<!--                android:text="Chi tiết"-->
+
+<!--                android:textSize="10dp" />-->
+<!--        </LinearLayout>-->
 
 
     </LinearLayout>
