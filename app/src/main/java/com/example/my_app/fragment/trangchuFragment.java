@@ -2,6 +2,7 @@ package com.example.my_app.fragment;
 
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -59,7 +60,10 @@ public class trangchuFragment extends Fragment {
         viewPager.setAdapter(adapter1);
         tabLayout.setupWithViewPager(viewPager);
 
+        int selectedTabColor = ContextCompat.getColor(getContext(), R.color.canhan);
+        int unselectedTabColor = ContextCompat.getColor(getContext(), R.color.black);
 
+        tabLayout.setTabTextColors(unselectedTabColor, selectedTabColor);
 
         ImageView switchButton2 = view.findViewById(R.id.btn_canhan);
         switchButton2.setOnClickListener(new View.OnClickListener() {

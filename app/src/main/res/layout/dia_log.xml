@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/custom_dialog">
+    android:layout_height="500dp"
+    android:orientation="vertical">
 
 
     <RelativeLayout
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        android:background="@drawable/custom_lichhoc"
+        android:background="@drawable/custom_tb"
         android:elevation="5dp">
 
         <LinearLayout
@@ -20,12 +19,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="3dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="4dp"
-                android:background="@drawable/custom_input" />
         </LinearLayout>
 
         <LinearLayout

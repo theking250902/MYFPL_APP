@@ -101,7 +101,7 @@ public class lichthiFragment extends Fragment {
         IRetrofit apiService = ApiClient.getApiService();
 
         int userId = 1;
-        int type = 1;
+        int type = 0;
         String date = "2022-10-24";
 
         Call<ApiResponse<Schedule>> call = apiService.getSchedules(userId, type, date);

@@ -45,7 +45,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@drawable/canhanbackground2"
+                android:background="@drawable/custom_avtr"
                 android:orientation="horizontal">
                 <ImageView
                     android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Trần Thiện Chiến"
+                    android:text="Bùi Văn Việt"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_gravity="center_horizontal"
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="chienttps24584@fpt.edu.vn"
+                    android:text="Vietbvps24653@fpt.edu.vn"
                     android:layout_gravity="center_horizontal"
                     android:textSize="15sp"
                     android:textStyle="normal"
@@ -110,7 +110,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PS24584"
+                    android:text="PS24653"
                     android:textStyle="normal"
                     android:textSize="20sp"
                     android:textColor="#291B1B"
@@ -168,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2003-01-02"
+                    android:text="2003-01-10"
                     android:textStyle="normal"
                     android:textSize="20sp"
                     android:textColor="#291B1B"
@@ -197,7 +197,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Thôn An Ba, xã Hành Thịnh, huyện Nghĩa Hành, tỉnh Quảng Ngãi"
+                    android:text="Thôn Đông Tịnh, Xã Hồng Lộc, Huyện Lộc hà, Tĩnh Hà Tĩnh"
                     android:textStyle="normal"
                     android:textSize="20sp"
                     android:textColor="#291B1B"
