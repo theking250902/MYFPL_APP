@@ -1,7 +1,10 @@
 package com.example.my_app.fragment;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -20,6 +23,7 @@ import com.example.my_app.DTO.ListPostResponseDTO;
 import com.example.my_app.DTO.Schedule;
 import com.example.my_app.IRetrofit;
 import com.example.my_app.MainActivity;
+import com.example.my_app.OnclickItem_lichhoc;
 import com.example.my_app.R;
 import com.example.my_app.RetrofitHelper;
 import com.example.my_app.ScheduleAdapter;
@@ -39,7 +43,10 @@ public class lichhocFragment extends Fragment {
     lichhocAdapter adapter;
     List<Schedule> list;
     IRetrofit iRetrofit;
+
     private TextView scheduleTextView;
+
+    Dialog dialog;
 
     View view;
     @Override
@@ -48,11 +55,31 @@ public class lichhocFragment extends Fragment {
 
     }
 
+
+
+    public Dialog onCreateDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        // Định nghĩa giao diện của dialog từ layout đã tạo
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dia_log, null);
+
+
+        builder.setView(dialogView);
+
+
+        // Tạo và trả về dialog đã thiết lập
+        return builder.create();
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          view = inflater.inflate(R.layout.fragment_lichhoc, container, false);
+
+         dialog = onCreateDialog();
 
         ImageView switchButton2 = view.findViewById(R.id.btn_back);
         switchButton2.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +95,12 @@ public class lichhocFragment extends Fragment {
         iRetrofit = RetrofitHelper.createService(IRetrofit.class);
         lvlichhoc = view.findViewById(R.id.listview2);
         list = new ArrayList<>();
-        adapter = new lichhocAdapter(list);
+        adapter = new lichhocAdapter(list, new OnclickItem_lichhoc() {
+            @Override
+            public void OnClick(Schedule schedule) {
+                dialog.show();
+            }
+        });
         lvlichhoc.setAdapter(adapter);
 
         IRetrofit apiService = ApiClient.getApiService();
@@ -110,10 +142,5 @@ public class lichhocFragment extends Fragment {
 
         return  view;
     }
-    private void updateScheduleUI(Schedule schedule) {
-        // Cập nhật giao diện với dữ liệu lịch học/thi
 
-
-
-    }
 }

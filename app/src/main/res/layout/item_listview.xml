@@ -2,17 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
 
     <RelativeLayout
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:elevation="5dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_lichhoc">
+        android:layout_margin="20dp"
+        android:background="@drawable/custom_tb">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:text="Phòng đào tạo"
-                    android:textColor="#EDA463"
+                    android:textColor="#F4C294"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -55,7 +56,7 @@
                 android:fontFamily="sans-serif"
                 android:maxLines="1"
                 android:text="Thông báo đăng ký thực hiện dự  án 19873892173813981"
-                android:textColor="#0A42E3"
+                android:textColor="#688FFF"
                 android:textSize="20dp"
                 android:textStyle="bold" />
             <View

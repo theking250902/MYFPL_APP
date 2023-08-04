@@ -1,10 +1,12 @@
 package com.example.my_app;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.my_app.DTO.DetailpostDTO;
 import com.example.my_app.DTO.ListPostResponseDTO;
 
 import java.util.List;
@@ -48,7 +50,16 @@ public class ScheduleAdapter extends BaseAdapter {
         holder.titleTxt.setText(post.getTitle());
         holder.created_atTxt.setText(post.getCreated_at() + "");
 
-
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xử lý sự kiện khi nhấn vào item
+                // Chuyển sang màn hình chi tiết sản phẩm và truyền ID sản phẩm qua Intent
+                Intent intent = new Intent(_viewGroup.getContext(), DetailActivity.class);
+                intent.putExtra("post_id", post.getId()); // Gửi ID sản phẩm
+                _viewGroup.getContext().startActivity(intent);
+            }
+        });
         return view;
     }
 

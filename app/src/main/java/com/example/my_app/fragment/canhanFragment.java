@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.my_app.MainActivity;
 import com.example.my_app.R;
 
 
@@ -53,13 +54,25 @@ public class canhanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_canhan, container, false);
+        View view = inflater.inflate(R.layout.fragment_canhan, container, false);
+        ImageView switchButton2 = view.findViewById(R.id.btn_back);
+        switchButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển đổi sang FragmentB khi nút được nhấp
+                ((MainActivity) requireActivity()).home();
+            }
 
-        ImageView imageView = rootView.findViewById(R.id.img_avt);
-        Glide.with(this)
-                .load(R.drawable.anhdaidien)
-                .apply(new RequestOptions().transform(new CenterCrop()).transform(new RoundedCorners(100)))
-                .into(imageView);
-        return rootView;
+
+
+
+
+
+
+
+        });
+
+
+        return view;
     }
 }

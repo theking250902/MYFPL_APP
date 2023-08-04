@@ -3,7 +3,10 @@ package com.example.my_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
@@ -18,11 +21,15 @@ import com.example.my_app.fragment.trangchuFragment;
 public class MainActivity extends AppCompatActivity {
 
 
+    LinearLayout bottomBar;
     private int selectedTab = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bottomBar = findViewById(R.id.bottomBar);
+        TransitionManager.beginDelayedTransition(bottomBar,new AutoTransition());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
 
@@ -37,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         lichhocFragment lichhocFragment = new lichhocFragment();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragmentcontainer, lichhocFragment)
+                .commit();
+        canhanFragment canhanFragment = new canhanFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, canhanFragment)
                 .commit();
 
 
@@ -80,9 +91,14 @@ public class MainActivity extends AppCompatActivity {
                     homeTxt.setVisibility(View.VISIBLE);
                     homeImage.setImageResource(R.drawable.icon_home_click);
                     homeLayout.setBackgroundResource(R.drawable.round_back_home_100);
+                    lichhocLayout.setBackgroundResource(R.drawable.background_icon);
+                    lichthiLayout.setBackgroundResource(R.drawable.background_icon);
+                    canhanLayout.setBackgroundResource(R.drawable.background_icon);
+
+
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f,Animation.RELATIVE_TO_SELF,0.0f);
-                    scaleAnimation.setDuration(200);
+                    scaleAnimation.setDuration(500);
                     scaleAnimation.setFillAfter(true);
                     homeLayout.startAnimation(scaleAnimation);
 
@@ -113,9 +129,12 @@ public class MainActivity extends AppCompatActivity {
                     lichhocTxt.setVisibility(View.VISIBLE);
                     lichhocImage.setImageResource(R.drawable.icon_lichhoc_click);
                     lichhocLayout.setBackgroundResource(R.drawable.round_back_lichhoc_100);
+                    homeLayout.setBackgroundResource(R.drawable.background_icon);
+                    lichthiLayout.setBackgroundResource(R.drawable.background_icon);
+                    canhanLayout.setBackgroundResource(R.drawable.background_icon);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f,Animation.RELATIVE_TO_SELF,0.0f);
-                    scaleAnimation.setDuration(200);
+                    scaleAnimation.setDuration(500);
                     scaleAnimation.setFillAfter(true);
                     lichhocLayout.startAnimation(scaleAnimation);
 
@@ -144,9 +163,12 @@ public class MainActivity extends AppCompatActivity {
                     lichthiTxt.setVisibility(View.VISIBLE);
                     lichthiImage.setImageResource(R.drawable.icon_lichthi_click);
                     lichthiLayout.setBackgroundResource(R.drawable.round_back_lichthi_100);
+                    lichhocLayout.setBackgroundResource(R.drawable.background_icon);
+                    homeLayout.setBackgroundResource(R.drawable.background_icon);
+                    canhanLayout.setBackgroundResource(R.drawable.background_icon);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f,Animation.RELATIVE_TO_SELF,0.0f);
-                    scaleAnimation.setDuration(200);
+                    scaleAnimation.setDuration(500);
                     scaleAnimation.setFillAfter(true);
                     lichthiLayout.startAnimation(scaleAnimation);
 
@@ -175,9 +197,12 @@ public class MainActivity extends AppCompatActivity {
                     canhanTxt.setVisibility(View.VISIBLE);
                     canhanImage.setImageResource(R.drawable.icon_profile_click);
                     canhanLayout.setBackgroundResource(R.drawable.round_back_canhan_100);
+                    homeLayout.setBackgroundResource(R.drawable.background_icon);
+                    lichthiLayout.setBackgroundResource(R.drawable.background_icon);
+                    lichhocLayout.setBackgroundResource(R.drawable.background_icon);
 
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f,Animation.RELATIVE_TO_SELF,0.0f);
-                    scaleAnimation.setDuration(200);
+                    scaleAnimation.setDuration(500);
                     scaleAnimation.setFillAfter(true);
                     canhanLayout.startAnimation(scaleAnimation);
 
@@ -210,6 +235,13 @@ public class MainActivity extends AppCompatActivity {
         trangchuFragment trangchuFragment = new trangchuFragment();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragmentcontainer, trangchuFragment)
+                .addToBackStack(null)  // Thêm fragment hiện tại vào back stack
+                .commit();
+    }
+    public void canhan() {
+        canhanFragment canhanFragment = new canhanFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentcontainer, canhanFragment)
                 .addToBackStack(null)  // Thêm fragment hiện tại vào back stack
                 .commit();
     }

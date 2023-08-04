@@ -1,5 +1,6 @@
 package com.example.my_app;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,10 +14,12 @@ import java.util.List;
 
 public class lichhocAdapter extends BaseAdapter {
 
+    OnclickItem_lichhoc onclickItem_lichhoc;
     private  List<Schedule> chedule;
 
-    public lichhocAdapter(List<Schedule> chedule){
+    public lichhocAdapter(List<Schedule> chedule, OnclickItem_lichhoc onclickItem_lichhoc){
         this.chedule = chedule;
+        this.onclickItem_lichhoc = onclickItem_lichhoc;
     }
 
     @Override
@@ -58,6 +61,12 @@ public class lichhocAdapter extends BaseAdapter {
         holder.textTeacher_name.setText(post.getTeacher_name());
         holder.textAddress.setText(post.getAddress());
 
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              onclickItem_lichhoc.OnClick(post);
+            }
+        });
 
 
         return view;

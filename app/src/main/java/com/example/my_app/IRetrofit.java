@@ -1,5 +1,6 @@
 package com.example.my_app;
 import com.example.my_app.DTO.ApiResponse;
+import com.example.my_app.DTO.DetailpostDTO;
 import com.example.my_app.DTO.ListPostResponseDTO;
 import com.example.my_app.DTO.ListScheduleDTO;
 import com.example.my_app.DTO.Schedule;
@@ -19,5 +20,9 @@ public interface IRetrofit {
             @Query("type") int type,
             @Query("date") String date
     );
+
+    @GET("/api/get-post-detail.php")
+    Call<DetailpostDTO> getPostDetail(@Query("id") int postId);
+
 
 }

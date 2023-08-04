@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -49,6 +50,17 @@ public class trangchuFragment extends Fragment {
         list = new ArrayList<>();
         adapter = new ScheduleAdapter(list);
         lvSchedules.setAdapter(adapter);
+
+
+
+        ImageView switchButton2 = view.findViewById(R.id.btn_canhan);
+        switchButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển đổi sang FragmentB khi nút được nhấp
+                ((MainActivity) requireActivity()).canhan();
+            }
+        });
 
 
         return view;
