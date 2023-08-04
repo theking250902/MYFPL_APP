@@ -18,8 +18,8 @@
         />
 
     <ImageView
-        android:layout_width="160dp"
-        android:layout_height="220dp"
+        android:layout_width="170dp"
+        android:layout_height="260dp"
         android:layout_marginTop="-20dp"
         android:layout_gravity="center"
 
@@ -43,7 +43,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/arsenal_bold"
-        android:text="Thực học - Thực nghiệm"
+        android:text="Thực học - Thực nghiệp"
         android:textColor="#A35602"
         android:textSize="20dp"
         android:textStyle="normal" />
@@ -101,7 +101,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="160dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginLeft="26dp"
             android:background="@drawable/custom_input"
@@ -118,7 +118,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
             android:layout_width="152dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text=" Google"
             android:paddingStart="20dp"
             android:drawablePadding="-25dp"

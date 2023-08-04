@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DangkyActivity"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_7ngay"
+        android:elevation="10dp"
+        android:fontFamily="@font/arsenal_bold"
+        android:text="Đăng ký"
+        android:textAllCaps="false"
+        android:textSize="18dp" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ Và Tên "/>
+
+    <EditText
+
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:hint="Họ và tên"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/custom_input2"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email "/>
+
+    <EditText
+
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:hint="Email trường"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/custom_input2"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MSSV "/>
+
+    <EditText
+
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:hint="MSSV"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/custom_input2"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email "/>
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:hint="Email"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/custom_input2"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email "/>
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:hint="Email"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/custom_input2"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email "/>
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/custom_email_icon"
+        android:hint="Email"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/custom_input2"
+        android:drawablePadding="12dp"
+        android:inputType="textEmailAddress" />
+</LinearLayout>

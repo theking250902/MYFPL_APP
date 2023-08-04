@@ -49,6 +49,7 @@ public class lichhocFragment extends Fragment {
     Dialog dialog;
 
     View view;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,13 +57,25 @@ public class lichhocFragment extends Fragment {
     }
 
 
-
-    public Dialog onCreateDialog() {
+    public Dialog onCreateDialog(Schedule schedule) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         // Định nghĩa giao diện của dialog từ layout đã tạo
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dia_log, null);
+        TextView textRoom = dialogView.findViewById(R.id.textRoom);
+        TextView  textDay = dialogView.findViewById(R.id.textDay);
+        TextView  textTime = dialogView.findViewById(R.id.textTime);
+        TextView  textClass_name = dialogView.findViewById(R.id.textClass_name);
+        TextView  textTeacher_name = dialogView.findViewById(R.id.textTeacher_name);
+        TextView textAddress = dialogView.findViewById(R.id.textAddress);
+
+        textRoom.setText(schedule.getRoom());
+        textDay.setText(schedule.getDay());
+        textTime.setText(schedule.getTime());
+        textClass_name.setText(schedule.getClass_name());
+        textTeacher_name.setText(schedule.getTeacher_name());
+        textAddress.setText(schedule.getAddress());
 
 
         builder.setView(dialogView);
@@ -77,9 +90,11 @@ public class lichhocFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         view = inflater.inflate(R.layout.fragment_lichhoc, container, false);
+        view = inflater.inflate(R.layout.fragment_lichhoc, container, false);
 
-         dialog = onCreateDialog();
+
+
+
 
         ImageView switchButton2 = view.findViewById(R.id.btn_back);
         switchButton2.setOnClickListener(new View.OnClickListener() {
@@ -91,13 +106,13 @@ public class lichhocFragment extends Fragment {
         });
 
 
-
         iRetrofit = RetrofitHelper.createService(IRetrofit.class);
         lvlichhoc = view.findViewById(R.id.listview2);
         list = new ArrayList<>();
         adapter = new lichhocAdapter(list, new OnclickItem_lichhoc() {
             @Override
             public void OnClick(Schedule schedule) {
+                dialog = onCreateDialog(schedule);
                 dialog.show();
             }
         });
@@ -117,13 +132,11 @@ public class lichhocFragment extends Fragment {
 
                     List<Schedule> scheduleList = response.body().getData();
 
-                        list.addAll(scheduleList);
-                        adapter.notifyDataSetChanged();
+                    list.addAll(scheduleList);
+                    adapter.notifyDataSetChanged();
 
-             //           Log.d("API Response", "ID: " + schedule.getId() + "");
-                        // Xử lý dữ liệu lịch học/thi trong schedule
-
-
+                    //           Log.d("API Response", "ID: " + schedule.getId() + "");
+                    // Xử lý dữ liệu lịch học/thi trong schedule
 
 
                     // Xử lý dữ liệu lịch học/thi
@@ -140,7 +153,7 @@ public class lichhocFragment extends Fragment {
             }
         });
 
-        return  view;
+        return view;
     }
 
 }

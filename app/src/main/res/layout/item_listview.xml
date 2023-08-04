@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:elevation="5dp"
-        android:layout_margin="20dp"
+        android:layout_margin="17dp"
         android:background="@drawable/custom_tb">
 
         <LinearLayout
